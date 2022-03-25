@@ -1,12 +1,21 @@
+let space = false
+let hasSpec = false
+
+
+
+
+
+
 const { FORMERR } = require('dns')
 const readline = require('readline')
 const reader = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   })
+
 reader.question(`Welcome User     
 Please Enter Your Password ` , function(answer){ /*Checks For Any Special Charcters */
-    for(i = 0; i < answer.length;i++){
+    for(let i = 0; i < answer.length;i++){
         if(answer[i] === " "){space = true}
         else if(
            answer[i] === "("   
@@ -36,7 +45,7 @@ Please Enter Your Password ` , function(answer){ /*Checks For Any Special Charct
         || answer[i] === "`"
         || answer[i] === "|"
 ){hasSpec = true} 
-        else{space = false, hasSpec = false}
+
     }
     
     
